@@ -30,5 +30,10 @@ function Player(game){
       this.sprite.animations.stop();
       this.sprite.frame = 4;
     }
+    
+    if (cursors.up.isDown && player.sprite.body.touching.down && hitPlatform){
+        player.sprite.body.velocity.y = -350;
+    }
   }
 }
+
